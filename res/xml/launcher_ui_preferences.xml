@@ -13,13 +13,13 @@
         android:title="Tray uses wallpaper colors"
         android:summaryOn="The Tray will be colored with a color extracted from the wallpaper"
         android:summaryOff="The Tray will be colored gray, but adjusted by the wallpaper brightness"
-        android:defaultValue="true"
+        android:defaultValue="false"
         android:persistent="true" />
 
     <SwitchPreference
         android:key="pref_isHotseatTransparent"
         android:title="Transparent Tray"
-        android:defaultValue="false"
+        android:defaultValue="true"
         android:disableDependentsState="true"
         android:persistent="true" />
 
@@ -142,7 +142,7 @@
         android:key="pref_fullWidthWidgets"
         android:persistent="true"
         android:title="Full width widgets"
-        android:defaultValue="false"
+        android:defaultValue="true"
         android:summary="Allow widgets to span over the whole width without padding" />
 
     <Preference
