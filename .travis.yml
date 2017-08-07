@@ -38,16 +38,11 @@ deploy:
       tags: true
   - provider: script
     skip_cleanup: true
-    script: scripts/deploy-vsmc.sh Beta
+    script: scripts/deploy-hockeyapp.sh beta
     on:
-      branch: beta
+      branch: master
   - provider: script
     skip_cleanup: true
-    script: scripts/deploy-vsmc.sh Alpha
-    on:
-      branch: alpha
-  - provider: script
-    skip_cleanup: true
-    script: scripts/deploy-vsmc.sh Release
+    script: scripts/deploy-hockeyapp.sh release
     on:
       tags: true
