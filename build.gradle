@@ -67,8 +67,18 @@ android {
         main {
             res.srcDirs = ['res']
             java.srcDirs = ['src', 'src_config']
-            manifest.srcFile "AndroidManifest.xml"
+            manifest.srcFile "AndroidManifest.xml" //'AndroidManifest-common.xml'
         }
+
+        /*
+        androidTest {
+            java.srcDirs = ['tests/src']
+            manifest.srcFile "tests/AndroidManifest.xml"
+        }
+
+        aosp {
+            manifest.srcFile "AndroidManifest.xml"
+        }*/
     }
     lintOptions {
         abortOnError false
@@ -86,7 +96,6 @@ dependencies {
     def supportLibVersion = '26.0.0-beta2'
     compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
     compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
-    compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
     compile "com.android.support:support-v4:${supportLibVersion}"
     compile "com.android.support:recyclerview-v7:${supportLibVersion}"
     compile "com.android.support:palette-v7:${supportLibVersion}"
